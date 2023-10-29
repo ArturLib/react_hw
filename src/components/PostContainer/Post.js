@@ -1,16 +1,18 @@
 import React from 'react';
 
-const PostOfComment = ({postDetails}) => {
+const Post = ({post}) => {
 
-    const {id, title, body} = postDetails;
+    const {id, title, body} = post;
 
     return (
         <div>
+            <hr/>
             <div>ID: {id}</div>
             <div>TITLE: {title}</div>
             <div>BODY: {body}</div>
+            <hr/>
         </div>
     );
 };
 
-export {PostOfComment};
+export {Post};

@@ -1,21 +1,22 @@
 import React from 'react';
+import {useNavigate} from "react-router-dom";
 
-import {PostOfComment} from "./PostOfComment";
-
-const Comment = ({comment, click, postDetails}) => {
+const Comment = ({comment}) => {
     
-    const {id, name, email, body} = comment;
+    const {id, postId, name, email, body} = comment;
+
+    const navigate = useNavigate();
 
     return (
         <div>
-            <div>id: {id}</div>
-            <div>name: {name}</div>
-            <div>email: {email}</div>
+            <div>ID: {id}</div>
+            <div>POST_ID: {postId}</div>
+            <div>NAME: {name}</div>
+            <div>EMAIL: {email}</div>
             <div>
-                body: {body}
-                <button onClick={() => click(id)}>post</button>
+                BODY: {body}
+                <button onClick={() => navigate('post', {state: {postId}})}>post</button>
             </div>
-            {postDetails && <PostOfComment postDetails={postDetails}/>}
         </div>
     );
 };
