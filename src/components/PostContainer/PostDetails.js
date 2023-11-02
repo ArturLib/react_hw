@@ -1,0 +1,25 @@
+import React from 'react';
+
+import {Comments} from "../CommentsContainer/Comments";
+
+const PostDetails = ({post}) => {
+
+    const {id, userId, title, body} = post;
+
+    return (
+        <div>
+            <h3>Post info:</h3>
+            <div>id - {id}</div>
+            <div>userId - {userId}</div>
+            <div>title - {title}</div>
+            <div>body - {body}</div>
+
+            <hr/>
+
+            <Comments postId={id}/>
+
+        </div>
+    );
+};
+
+export {PostDetails}
