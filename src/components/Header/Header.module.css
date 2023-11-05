@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    background-color: silver;
+    color: whitesmoke;
+    height: 50px;
+}
+
+.header a {
+    text-decoration: none;
+    color: white;
+    margin: 0 5px;
+}
+
+.header a[class='active'] {
+    color: aqua;
+}
