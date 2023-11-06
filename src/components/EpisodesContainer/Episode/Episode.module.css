@@ -1,0 +1,9 @@
+.episode {
+    border: 1px solid black;
+    width: calc(25% - 2px);
+}
+
+.episode:hover {
+    cursor: pointer;
+    background-color: whitesmoke;
+}
